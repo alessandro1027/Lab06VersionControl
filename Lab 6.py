@@ -22,7 +22,7 @@ def encode(password):
 
 
 def decode(password):
-    # Derek's decod function
+    # Derek's decoding function
     encoded_password = ''
     list_password = list(password)
     int_password = map(int, list_password)
