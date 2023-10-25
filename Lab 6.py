@@ -22,7 +22,15 @@ def encode(password):
 
 
 def decode(password):
-    # collaborator will add this function
+    # Derek's Decode function
+    encoded_password = ''
+    list_password = list(password)
+    int_password = map(int, list_password)
+    list_int_password = list(int_password)
+    for num in list_int_password:
+        encoded_num = num - 3
+        encoded_password += str(encoded_num)
+    return encoded_password
     pass
 
 
