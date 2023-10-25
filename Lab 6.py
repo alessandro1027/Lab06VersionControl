@@ -18,10 +18,11 @@ def encode(password):
         encoded_password += ''.join(password_list[i])
 
     return encoded_password
+    # end encode(password) function
 
 
 def decode(password):
-
+    # collaborator will add this function
     pass
 
 
@@ -31,16 +32,21 @@ def display_menu():
           "1. Encode\n"
           "2. Decode\n"
           "3. Quit\n")
+    # display menu function
 
 
 def main():
 
+    # initialized vars
     decoded_password = ''
     encoded_password = ''
+
+    # while loop for menu selection
     while True:
         display_menu()
         menu_selection = int(input("Please enter an option: "))
 
+        # match statement to match the menu option selected
         match menu_selection:
             case 1:
                 password = input("Please enter your password to encode: ")
@@ -54,8 +60,10 @@ def main():
                 print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}.")
             case 3:
                 break
+                # menu selection for user to quit
             case _:
                 print("Invalid selection")
+                # incase an int is inputted which is not in the menu
 
 
 if __name__ == "__main__":
